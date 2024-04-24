@@ -16,11 +16,12 @@ class CourseEntity:
        return self.universitySubjects
     
     def setUniversitySubjects(self, newUniversitySubjects):
-       self.universitySubjects = newUniversitySubjects
+       self.universitySubjects.append(newUniversitySubjects)
 
     def __str__(self):
        return f"name: {self.name}\nuniversity subjects: {self.universitySubjects}"
 
 curso = CourseEntity("Sistemas de informação")
-curso.setUniversitySubjects([CollegeSubjectEntity("TGA", 15, 30)])
+materia1 = CollegeSubjectEntity("TGA", 15, 30)
+curso.setUniversitySubjects(materia1.getName())
 print(curso)

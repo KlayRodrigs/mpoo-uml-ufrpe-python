@@ -15,6 +15,18 @@ class CollegeSubjectEntity(ClassroomEntity):
     def setName(self, newName):
         self.name = newName
     
+    def getStudentsInCollegeSubject(self):
+        return self.students
+    
+    def addStudentToCollegeSubject(self,newStudent):
+        self.students.append(newStudent)
+
+    def getTeacherInCollegeSubject(self):
+        return self.teachers
+
+    def addTeacherToCollegeSubject(self,newTeacher):
+        self.teachers.append(newTeacher)
+
     def __str__(self):
         return f"disciplina: {self.name}\nstudents: {self.students}\nteachers: {self.teachers}"
 
